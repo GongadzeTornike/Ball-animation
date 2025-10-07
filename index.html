@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixi + GSAP Cursor Follow Ball</title>
+    <title>Pixi + GSAP Ball</title>
     <style>
       html,
       body {
@@ -12,21 +12,33 @@
         height: 100%;
         background-color: #0f1724;
         overflow: hidden;
-      }
-      h1 {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
         font-family: sans-serif;
-        opacity: 0.8;
+        color: white;
+        display: flex;
+        flex-direction: column;
+      }
+      header,
+      footer {
+        text-align: center;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      #canvas-container {
+        flex: 1;
+        position: relative;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-C_edVdZN.js"></script>
+    <script type="module" crossorigin src="/Ball-animation/assets/index-BGWCqfmI.js"></script>
   </head>
   <body>
-    <h1>Move your mouse ✦</h1>
+    <header><h1>Pixi + GSAP Ball</h1></header>
+    <div id="canvas-container"></div>
+    <footer>Experimental</footer>
 
   </body>
 </html>
