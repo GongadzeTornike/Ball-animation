@@ -22,7 +22,6 @@ import { gsap } from "gsap";
   circle.y = app.screen.height / 2;
   app.stage.addChild(circle);
 
-  // 🌑 Shadow
   const shadow = new PIXI.Graphics();
   shadow.beginFill(0x000000, 0.3);
   shadow.drawEllipse(0, 0, 60, 20);
@@ -50,7 +49,6 @@ import { gsap } from "gsap";
     shadow.y = circle.y + 55;
   });
 
-  // 💥 Click pulse
   window.addEventListener("click", () => {
     gsap.killTweensOf(circle.scale);
     gsap.to(circle.scale, {
